@@ -1,7 +1,6 @@
 
-
-**Step by step familar with MongoDB on rails.**
-
+Step by step familar with MongoDB on rails
+---
 Before start off with rails. Must install MongoDb (using Mac OS)
  
   - Just only one command:
