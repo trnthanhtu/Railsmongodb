@@ -2,7 +2,7 @@
 
 Step by step familar with MongoDB on rails.
 
-Before start off with rails. Must install MongoDb (using Mac OS)
+Before start off with rails. Must install MongoDb (Am using Mac OS)
   - Just only one command:
     `$ brew install mongodb`
 
@@ -13,7 +13,7 @@ Before start off with rails. Must install MongoDb (using Mac OS)
    `mongod --dbpath <path to data directory>` 
 
 
-Okey. Let's start and joy
+Okey. Let's start and enjoy it.
 
 Step 1. Create new app without active record and test unit and skip bundle
 
@@ -28,5 +28,28 @@ Step 2 . Install MongoDB gem
     `rails generate mongoid:config`
     => auto create `create  config/mongoid.yml`
 
-Step 3: continue :d
+Step 3: Create simple entity Book
+
+  rails g scaffold book name type auth price
+
+Take look on model. 
+
+---
+      class Book
+        include Mongoid::Document
+        field :name, type: String
+        field :type, type: String
+        field :auth, type: String
+        field :price, type: String
+      end
+---
+That's quiet different! No database schema, no db migrate
+If you wanna add a new field, u could just declare one in the model.
+
+Step 4: Run your app
+
+NOTICE:
+  Must start mongo db before run app.
+
+Finally :D Tast it :D:D:
 
