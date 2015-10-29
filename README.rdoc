@@ -1,32 +1,32 @@
 
-
-Step by step familar with MongoDB on rails.
-
-Before start off with rails. Must install MongoDb (Am using Mac OS)
+Step by step familar with MongoDB on rails
+---
+Before start off with rails. Must install MongoDb (using Mac OS)
+ 
   - Just only one command:
-    `$ brew install mongodb`
+      $ brew install mongodb
 
   - Create the data directory: By the default Mongodb prcess uses the /data/db directory. Let's create the defualt with permision: root
-     `sudo mkdir -p/data/db`  
+       sudo mkdir -p/data/db  
 
   - Run MongoDB. ensure that you have permission
-   `mongod --dbpath <path to data directory>` 
+      mongod --dbpath <path to data directory>
 
 
 Okey. Let's start and enjoy it.
 
 Step 1. Create new app without active record and test unit and skip bundle
 
-  `rails new app_name --skip-active-record --skip-test-unit --skip-bundle`
+  rails new app_name --skip-active-record --skip-test-unit --skip-bundle
 
 Step 2 . Install MongoDB gem
 
  -  Add line `gem 'mongoid'` into Gemfile
-  `gem "mongoid", git: 'git://github.com/mongoid/mongoid.git'`
- - run `bundle install ` 
+  gem "mongoid", git: 'git://github.com/mongoid/mongoid.git'
+ - run bundle install  
  - Finally run :
-    `rails generate mongoid:config`
-    => auto create `create  config/mongoid.yml`
+    rails generate mongoid:config
+    => auto create create  config/mongoid.yml
 
 Step 3: Create simple entity Book
 
