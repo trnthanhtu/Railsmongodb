@@ -12,7 +12,10 @@ Before start off with rails. Must install MongoDb (using Mac OS)
   - Run MongoDB. ensure that you have permission
       mongod --dbpath <path to data directory>
 
+  - Login mongodb
 
+    mongo
+    
 Okey. Let's start and enjoy it.
 
 Step 1. Create new app without active record and test unit and skip bundle
